@@ -1,0 +1,13 @@
+[Unit]
+Description=Script to load DS1307 RTC i2c device during boot
+After=systemd-modules-load.service
+Before=network.target
+#After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/i2c_rtc.sh
+
+[Install]
+WantedBy=multi-user.target
+
