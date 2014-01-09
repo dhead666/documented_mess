@@ -1,0 +1,4 @@
+echo "Mounting ramfs to /mnt/ramfs"
+mount -t ramfs none /mnt/ramfs
+echo "Creating 20GB sparse file at /mnt/ramfs/ramfs.img"
+truncate -s 20G /mnt/ramfs/ramfs.img

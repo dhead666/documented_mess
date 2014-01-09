@@ -1,0 +1,2 @@
+echo "Unmounting ramfs from /mnt/ramfs"
+umount /mnt/ramfs

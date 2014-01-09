@@ -1,0 +1,3 @@
+echo "Start Xen services"
+/etc/rc.d/xencommons start
+~/bin/mkramfs

@@ -1,0 +1,10 @@
+~/bin/mkramfs
+echo "Formatting ramfs.img"
+mkfs.ext4 /mnt/ramfs/ramfs.img
+echo "Mounting ramfs.img to /mnt/chroot"
+mount -o loop /mnt/ramfs/ramfs.img /mnt/chroot
+echo "creating the chroot"
+CHROOT=/mnt/chroot
+mkarchroot $CHROOT/root base-devel
+echo 'Update chroot: #arch-nspawn $CHROOT/root pacman -Syu'
+echo 'Build in chroot: #makechrootpkg -c -r $CHROOT'
