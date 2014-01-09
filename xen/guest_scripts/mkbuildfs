@@ -1,0 +1,4 @@
+parted -s /dev/xvdb unit GB mklabel msdos mkpart primary ext2 0 20
+mkfs.ext4 /dev/xvdb1
+mount /dev/xvdb1 /mnt
+chown dhead:users /mnt

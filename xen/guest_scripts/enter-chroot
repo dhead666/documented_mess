@@ -1,0 +1,2 @@
+export MY_CHROOT=/mnt/deb32
+chroot $MY_CHROOT /bin/bash
